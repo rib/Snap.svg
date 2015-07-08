@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// build: 2015-04-13
+// build: 2015-07-08
 
 // Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
 // 
@@ -809,7 +809,7 @@ var mina = (function (eve) {
 // limitations under the License.
 
 var Snap = (function(root) {
-Snap.version = "0.4.0";
+Snap.version = "0.4.1";
 /*\
  * Snap
  [ method ]
@@ -2288,7 +2288,7 @@ function Paper(w, h) {
         desc,
         defs,
         proto = Paper.prototype;
-    if (w && w.tagName == "svg") {
+    if (w && w.tagName.toLowerCase() == "svg") {
         if (w.snap in hub) {
             return hub[w.snap];
         }
